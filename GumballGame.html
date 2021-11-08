@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #darwin {
+            width: 150px;
+            height: 150px;
+            position: absolute;
+        }
+
+        #gumball {
+            width: 185px;
+            height: 195px;
+            position: absolute;
+        }
+
+        #richard {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        #anais {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+        #nicole {
+            width: 180px;
+            height: 230px;
+            position: absolute;
+        }
+        #tobias {
+            width: 235px;
+            height: 250px;
+            position: absolute;
+        }
+        #penny {
+            width: 240px;
+            height: 260px;
+            position: absolute;
+        }
+        #top {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-style:oblique;
+        
+        }
+    </style>
+</head>
+
+<body>
+    <div id="top">
+        <span style="font-size: 40px; color: blueviolet;">Your point is</span>
+        <label id="point" style="font-size: 40px; color: blueviolet; padding-left: 135px;">0</label>
+    </div>
+   
+
+
+    <img id='darwin' onclick="catchDiv()"
+        src=https://static.wikia.nocookie.net/gumball-hayranlari/images/7/7e/Darwin3.png/revision/latest/scale-to-width-down/200?cb=20161213113027&path-prefix=tr
+        alt="">
+    <img id="gumball" onclick="catchDiv2()"
+        src="https://static.wikia.nocookie.net/gumball-hayranlari/images/3/33/Gumball1.png/revision/latest/scale-to-width-down/200?cb=20161213111316&path-prefix=tr"
+        alt="">
+    <img id="richard" onclick="catchDiv4()"
+        src="https://img.wattpad.com/497849eb8bc7526e5409333378ee54bd5d8c87ba/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f776174747061642d6d656469612d736572766963652f53746f7279496d6167652f4d623270525859383959646570513d3d2d3932393339303737352e313632366361626662363665653333333137333334363430393936332e6a7067"
+        alt="">
+    <img id="tobias" onclick="catchDiv3()"
+        src="http://images2.wikia.nocookie.net/__cb20110514223315/theamazingworldofgumball/images/2/2a/Tobias.png"
+        alt="">
+    <img id="penny" onclick="catchDiv3()"
+        src="https://static.wikia.nocookie.net/gumball-hayranlari/images/0/01/Penny1.png/revision/latest/scale-to-width-down/150?cb=20200410203518&path-prefix=tr"
+        alt="">
+    <img id="anais" onclick="catchDiv4()"
+        src="https://i.pinimg.com/originals/f2/84/1f/f2841f77e31deddfa8fa3d50043972ff.png" alt="">
+    <img id="nicole" onclick="catchDiv4()"
+        src="https://static.wikia.nocookie.net/vsbattles/images/e/e6/Nicole_watterson.png/revision/latest/scale-to-width-down/300?cb=20160623021721"
+        alt="">
+
+</body>
+
+</html>
+
+<script>
+    var runInterval = setInterval(runBoxrun, 1000)
+
+    function runBoxrun() {
+        if (point < 0) {
+            console.log("Puanınız eksiye düştü!")
+        }
+
+        var randomX = Math.floor(Math.random() * screen.width);
+        var randomY = Math.floor(Math.random() * screen.height);
+
+        var randomX2 = Math.floor(Math.random() * screen.width);
+        var randomY2 = Math.floor(Math.random() * screen.height);
+
+        var randomX3 = Math.floor(Math.random() * screen.width);
+        var randomY3 = Math.floor(Math.random() * screen.height);
+
+        var randomX4 = Math.floor(Math.random() * screen.width);
+        var randomY4 = Math.floor(Math.random() * screen.height);
+
+        var randomX5 = Math.floor(Math.random() * screen.width);
+        var randomY5 = Math.floor(Math.random() * screen.height);
+
+        var randomX6 = Math.floor(Math.random() * screen.width);
+        var randomY6 = Math.floor(Math.random() * screen.height);
+
+        var randomX7 = Math.floor(Math.random() * screen.width);
+        var randomY7 = Math.floor(Math.random() * screen.height);
+
+        document.getElementById('darwin').style.left = randomX + 'px';
+        document.getElementById('darwin').style.top = randomY + "px";
+
+        document.getElementById('gumball').style.left = randomX2 + 'px';
+        document.getElementById('gumball').style.top = randomY2 + "px";
+
+        document.getElementById('richard').style.left = randomX3 + 'px';
+        document.getElementById('richard').style.top = randomY3 + "px";
+
+        document.getElementById('anais').style.left = randomX4 + 'px';
+        document.getElementById('anais').style.top = randomY4 + "px";
+
+        document.getElementById('nicole').style.left = randomX5 + 'px';
+        document.getElementById('nicole').style.top = randomY5 + "px";
+
+        document.getElementById('tobias').style.left = randomX6 + 'px';
+        document.getElementById('tobias').style.top = randomY6 + "px";
+
+        document.getElementById('penny').style.left = randomX7 + 'px';
+        document.getElementById('penny').style.top = randomY7 + "px";
+
+    }
+    var point = 0;
+
+    function catchDiv() {
+        point = point + 25;
+
+        document.getElementById('point').innerHTML = point
+    }
+
+    function catchDiv2() {
+        point = point + 20;
+
+        document.getElementById('point').innerHTML = point
+    }
+    function catchDiv3() {
+        point = point - 25;
+        document.getElementById('point').innerHTML = point
+    }
+    function catchDiv4() {
+        point = point - 15;
+        document.getElementById('point').innerHTML = point
+    }
+</script>
